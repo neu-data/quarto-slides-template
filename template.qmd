@@ -1,0 +1,91 @@
+---
+title: "Presentation Title"
+subtitle: "Optional subtitle"
+author: "Presenter Name, Role"
+institute: "Neudata Consulting Ltd"
+date: today
+date-format: "DD-MM-YYYY"
+format: neudata-revealjs
+---
+
+# Background
+
+## Title
+
+[Notes]{.neudata-note}
+
+## Study overview
+
+:::: {.columns}
+::: {.column width="50%"}
+### Study design
+Description of the design\
+Setting and population\
+Data collection period
+
+### Primary outcome
+Definition of the primary outcome
+:::
+
+::: {.column width="50%"}
+### Intervention
+- Component one
+- Component two
+- Component three
+:::
+::::
+
+# Results
+
+## Key numbers
+
+:::: {.columns}
+::: {.column width="33%"}
+[12,345]{.neudata-stat}
+[participants]{.neudata-stat-label}
+:::
+::: {.column width="33%"}
+[87.4%]{.neudata-stat}
+[coverage]{.neudata-stat-label}
+:::
+::: {.column width="33%"}
+[5]{.neudata-stat}
+[study sites]{.neudata-stat-label}
+:::
+::::
+
+::: {.key-findings}
+**Key finding** — state the main result plainly, with its size and uncertainty.
+:::
+
+## Live code and figures
+
+```{r}
+#| output-location: column
+#| fig-width: 6
+#| fig-height: 4.5
+library(ggplot2)
+ggplot(ToothGrowth, aes(factor(dose), len, fill = supp)) +
+  geom_boxplot(alpha = 0.85) +
+  scale_fill_manual(values = c("#055F56", "#0B376C")) +
+  labs(x = "Dose (mg/day)", y = "Tooth length", fill = NULL) +
+  theme_minimal(base_size = 16)
+```
+
+## Table
+
+| Group   |     N | Estimate (%) | 95% CI    |
+|:--------|------:|-------------:|:----------|
+| Overall | 1,200 |         84.2 | 81.9–86.3 |
+| Urban   |   640 |         88.1 | 85.3–90.4 |
+| Rural   |   560 |         79.8 | 76.2–83.0 |
+
+## Step by step {.incremental}
+
+- Points appear one at a time
+- Useful for teaching and workshops
+- Press **F** for full screen, **S** for speaker notes
+
+::: {.notes}
+Speaker notes go here.
+:::
